@@ -1,0 +1,29 @@
+//sets the variable to 0
+public class Weather 
+{
+	public int year = 0	;
+	public int month = 0;
+	public Double max_temp = 0.0;
+	public Double min_temp = 0.0;
+	public Double frosty_days = 0.0;
+	public Double rain_in_mm = 0.0;
+	public Double hours_of_sun = 0.0;
+	public String location = "0";
+	//stores it variables into a method called Weather which is used in the main class
+	public Weather(int year, int month, Double max_temp, Double min_temp, Double frosty_days, Double rain_in_mm, Double hours_of_sun, String location)
+	{
+		this.year = year;
+		this.month = month;
+		this.max_temp = max_temp;
+		this.min_temp = min_temp;
+		this.frosty_days = frosty_days;
+		this.rain_in_mm = rain_in_mm;
+		this.hours_of_sun = hours_of_sun;
+		this .location = location.replaceAll(".txt", "");
+	}
+	// this prints all the data for the location method by location first all the way to hours of the sun
+	public void printData()
+	{
+		System.out.printf("Location is: %s, Year: %d, Month: %d, max_temp: %.2f, min_temp: %.2f, frosty_days: %.2f, rain_in_mm: %.2f, hours_of_sun: %.2f  \n", location, year, month, max_temp, min_temp, frosty_days, rain_in_mm, hours_of_sun);
+	}
+}
